@@ -27,8 +27,6 @@ const inputsList = [
     },
 ];
 
-
-
 export function RegistrationForm(props) {
     const {values, errors, handleInputChange, handleSelectChange} = useRegistrationForm({
         name: null,
@@ -43,9 +41,6 @@ export function RegistrationForm(props) {
         alert(JSON.stringify(values, null, 2));
     };
 
-    console.log(Object.values(values));
-    console.log(errors);
-    console.log(Object.keys(errors).length > 0 && !Object.values(values).every(item => item != null));
     return (
         <div className={styles.registrationContainer}>
             <h2 className={styles.header}>Регистрация</h2>
